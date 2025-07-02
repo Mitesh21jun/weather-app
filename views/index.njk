@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="mb-4">Weather Search</h1>
+    <form id="weather-form" class="form-inline mb-3">
+      <input type="text" class="form-control mr-2" id="address" placeholder="Enter address" required>
+      <button type="submit" class="btn btn-primary mr-2">Get Weather</button>
+      <button type="button" class="btn btn-success mr-2" id="save-btn">Save Result</button>
+      <button type="button" class="btn btn-info" id="history-btn">Show History</button>
+    </form>
+    <div id="weather-result" class="mb-3"></div>
+    <div id="history-list"></div>
+  </div>
+  <script src="/main.js"></script>
+</body>
+</html>
