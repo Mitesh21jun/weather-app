@@ -13,13 +13,20 @@ $(function() {
   }
 
   function renderWeather(address, w) {
+    // Use OpenWeatherMap icon if available
+    const icon = w.weather?.[0]?.icon
+      ? `<img class="weather-icon" src="https://openweathermap.org/img/wn/${w.weather[0].icon}@2x.png" alt="icon">`
+      : '';
     return `<div class="card"><div class="card-body">
-      <h5>${address} (${w.name || ''})</h5>
-      <p><b>Temp:</b> ${w.main?.temp ?? 'N/A'}°C (feels like ${w.main?.feels_like ?? 'N/A'}°C)</p>
-      <p><b>Weather:</b> ${w.weather?.[0]?.main ?? 'N/A'} - ${w.weather?.[0]?.description ?? 'N/A'}</p>
-      <p><b>Humidity:</b> ${w.main?.humidity ?? 'N/A'}% <b>Wind:</b> ${w.wind?.speed ?? 'N/A'} m/s</p>
-      <p><b>Pressure:</b> ${w.main?.pressure ?? 'N/A'} hPa <b>Clouds:</b> ${w.clouds?.all ?? 'N/A'}%</p>
-      <p><b>Rain (1h):</b> ${w.rain?.['1h'] ? w.rain['1h'] + ' mm' : 'N/A'}</p>
+      ${icon}
+      <div>
+        <h5>${address} (${w.name || ''})</h5>
+        <p><b>Temp:</b> ${w.main?.temp ?? 'N/A'}°C (feels like ${w.main?.feels_like ?? 'N/A'}°C)</p>
+        <p><b>Weather:</b> ${w.weather?.[0]?.main ?? 'N/A'} - ${w.weather?.[0]?.description ?? 'N/A'}</p>
+        <p><b>Humidity:</b> ${w.main?.humidity ?? 'N/A'}% <b>Wind:</b> ${w.wind?.speed ?? 'N/A'} m/s</p>
+        <p><b>Pressure:</b> ${w.main?.pressure ?? 'N/A'} hPa <b>Clouds:</b> ${w.clouds?.all ?? 'N/A'}%</p>
+        <p><b>Rain (1h):</b> ${w.rain?.['1h'] ? w.rain['1h'] + ' mm' : 'N/A'}</p>
+      </div>
     </div></div>`;
   }
 

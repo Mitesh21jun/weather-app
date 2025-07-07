@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Weather App</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/style.css">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
   <div class="container mt-5">
-    <h1 class="mb-4">Weather Search</h1>
+    <h1 class="mb-4" style="font-weight:700; background: linear-gradient(90deg,#f6d365,#fda085); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Weather Search</h1>
     <form id="weather-form" class="form-inline mb-3">
-      <input type="text" class="form-control mr-2" id="address" placeholder="Enter address" required>
+      <input type="text" class="form-control mr-2" id="address" placeholder="Enter address" required style="min-width:250px;">
       <button type="submit" class="btn btn-primary mr-2">Get Weather</button>
       <button type="button" class="btn btn-success mr-2" id="save-btn">Save Result</button>
       <button type="button" class="btn btn-info" id="history-btn">Show History</button>

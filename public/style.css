@@ -1,0 +1,77 @@
+/* public/style.css */
+body {
+  background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.container {
+  background: rgba(255,255,255,0.95);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.15);
+  padding: 2rem 2.5rem 2.5rem 2.5rem;
+  margin-top: 3rem;
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px 0 rgba(44,62,80,0.10);
+  background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  color: #222;
+  margin-bottom: 1.5rem;
+}
+
+.card-body h5 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+
+.btn {
+  border-radius: 20px;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary:hover {
+  background: #fda085;
+  color: #fff;
+  box-shadow: 0 2px 8px 0 rgba(253,160,133,0.25);
+}
+
+.btn-success:hover {
+  background: #74ebd5;
+  color: #222;
+  box-shadow: 0 2px 8px 0 rgba(116,235,213,0.25);
+}
+
+.btn-info:hover {
+  background: #ACB6E5;
+  color: #222;
+  box-shadow: 0 2px 8px 0 rgba(172,182,229,0.25);
+}
+
+.list-group-item {
+  background: rgba(255,255,255,0.85);
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 0.7rem;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+
+.list-group-item:hover {
+  background: #f6d365;
+  box-shadow: 0 2px 8px 0 rgba(246,211,101,0.15);
+}
+
+.weather-icon {
+  width: 48px;
+  height: 48px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+#weather-result .card-body, #history-list .card-body {
+  display: flex;
+  align-items: center;
+}
