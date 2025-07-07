@@ -1,4 +1,3 @@
-// models/weather.js
 const pool = require('./db');
 
 async function getApiKey(service) {

@@ -1,4 +1,3 @@
-// controllers/weatherController.js
 const axios = require('axios');
 const Weather = require('../models/weather');
 
